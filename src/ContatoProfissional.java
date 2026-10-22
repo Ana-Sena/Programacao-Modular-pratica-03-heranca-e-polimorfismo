@@ -1,0 +1,23 @@
+public class ContatoProfissional extends Contato {
+    private String empresa;
+    private String cargo;
+
+    public ContatoProfissional(String nome, String email, String telefone, String empresa, String cargo){
+        super(nome, email, telefone);
+        this.empresa = empresa;
+        this.cargo = cargo;
+    }
+
+    public void setEmpresa(String empresa) {this.empresa = empresa;}
+    public String getEmpresa(){return empresa;}
+
+    public void setCargo(String cargo) {this.cargo = cargo;}
+    public String getCargo(){return cargo;}
+
+    public void exibeContatoProf(){
+        super.exibeContato();
+        System.out.println("Empresa: " + getEmpresa());
+        System.out.println("Cargo: " + getCargo());
+    }
+}
+
